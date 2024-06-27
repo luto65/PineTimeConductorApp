@@ -1,5 +1,20 @@
-# PineTimeConductorApp
-This repository describes the final setup that allows me to build the PineTimeConductor: an InfiniTime based version of PineTime focused on the needs of Conductors.
+# PineTimeConductorWatch
+This repository describes the final setup that allows me to build the PineTimeConductorWatch: an InfiniTime based version of PineTime focused on the needs of Orchestra Conductors. Of all specialised wearables for Conductors that I tried, the best of them is surely the  SB Pulse. However, the price tag and the control capabilities it provided did not met my needs and therefore I decided to try out PineTime. It has not been easy, however now that I achieved the first results, it is highly rewarding and the appropriate way for me. While I recognize that not all conductors
+be as skilled as I am also in programming, perhaps some will like to use what I  do for themselves too.
+
+## Development Workflow
+First one has to develop the C++ code, and at best test it out in the simulator (called InfiniSim). 
+Due to the use of SDL2 2 framework, there are several graphical Integrated Development Environments available, some free (e.g. EEZ Studio) some one the web, and some commercial. While I tried several of them, I found that the best way is simply to learn it the hard way, through the documentation and the large number of available code. Frankly speaking, I also tried the help of chatgpt in generating code. At the end, it did not help much and the code that finally now runs with my ConductorMetroApp has been entirely written by myself, whereby relying on the original MetronomeApp for the most important part ... controlling the motor that generates the vibration. Without that code, i would have not been able to get it up and running so fast.
+
+### Build and Test
+The PineTime development is *monolythic* that means that both the operating system and the applications need to be deployed and packaged in one go. Since the packaging could be tricky, the way I develop the PineTimeConductorWatch
+
+
+### Deploy
+
+
+
+
 
 0. MacBook Pro 2013
 This is my host, running macOS Big Sur (11.7.10), and with a fat SSD (1 Terabyte).
@@ -37,6 +52,7 @@ The foundations are:
   install the whole environment for building and runnign the simulator.
   'sudo zypper install cmake libSDL2-devel gcc-c++ gcc npm libpng16-devel patch'
 - Adafruit_nRF52_nrfutil
+  This is reqhis is required for the final build and cannot be installed easily on Suse
 - Several python modules
 
  
