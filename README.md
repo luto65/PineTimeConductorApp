@@ -44,17 +44,17 @@ The PineTime development is *monolythic* that means that both the operating syst
 - designing what needs to be global ( .h) and what local (.cpp)
 - check the API for the objects you want to use (make sure to always use the version 7.11 as that is the SDL that is suported by InfiniSim)
 - build for the simulator
-''''
+`
 cmake -S . -B build
-''''
+`
 that command executed in the same location where you have installed InfiniSim will generate (if successfull) the appropriate Makefile required for the rest of the InfiniSim activities
-''''
+`
 cmake --build build -j4
-''''
+`
 this command is the one that you will execute again and again after modifying the cpp and the h of your application. It generates in the build/ folder the executable called "infinisim"
-''''
+`
 build/infinisim
-''''
+`
 is finally the command that executes the simulator and let you check if your idea was properly implemented or not.
 Once you are satisfied, the way to push it to the PineTime is not that hard, if you follow the following recipe
 
@@ -63,13 +63,13 @@ The  process for building to deploy takes place in the InfiniTime folder and whi
 it requires several components to be properly installed, and to choose a specific deployment strategy.
 Since in my case I have a sealed PineTime, the only way to deploy the PineTimeConductorWatch is to package it as mcuboot-app-dfu.
 This is easily achieved by executing the following command in the InfiniTime folder:
-''''
+`
 cmake -DARM_NONE_EABI_TOOLCHAIN_PATH=/home/luca/gcc-arm-none-eabi-10.3-2021.10 -DNRF5_SDK_PATH=/home/luca/nRF5_SDK_15.3.0_59ac345 -DBUILD_DFU=1 -DBUILD_RESOURCES=1 -DTARGET_DEVICE=PINETIME
-''''
+`
 followed by
-''''
+`
 cmake pinetime-mcuboot-app-dfu
-''''
+`
 this generates in Infinitime/src/ the file that needs then to be uploaded to the PineTime:
 *pinetime-mcuboot-app-dfu-1.14.0.zip*
 
