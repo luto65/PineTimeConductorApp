@@ -68,7 +68,7 @@ cmake -DARM_NONE_EABI_TOOLCHAIN_PATH=/home/luca/gcc-arm-none-eabi-10.3-2021.10 -
 `
 followed by
 `
-cmake pinetime-mcuboot-app-dfu
+make -j4 pinetime-mcuboot-app
 `
 this generates in Infinitime/src/ the file that needs then to be uploaded to the PineTime:
 *pinetime-mcuboot-app-dfu-1.14.0.zip*
