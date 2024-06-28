@@ -16,18 +16,18 @@ Therefore in this distribution you will not find
 - a tuner (since PineTime does not emit sounds)
 
 However what you will find are
-- ConMetronomeApp
+- EasyMetronome
   a realistically usable metronome (the one in the original distribution was too difficult for me to be of any use)
-- ConWatchFace
+- ModiWatchFace
   a watchface that I developed to facilitate creating compositions based on all church modes
-- ConCircleOf5ths
+- CircleOf5ths
   how often do we need it and do not dear to look it up on paper ..
-- ConTranspositionMap
+- TranspositionMap
   and how often do we remeber appropriately how to explain what a Concert tone for a specific transposing instrument ?
-- ConReferenceTone
+- ReferenceTone
   inspite of not emitting sound, i found away to generate a clear reference tone that be useful to the conductor for example when singing
   a part for an instruments
-- ConOrchestralRanges
+- OrchestralRanges
   always remember the colour of the ranges of each instrument and how best to match them ?
 - ... more ideas .. let me know
 
@@ -78,8 +78,15 @@ I tried Android, i tried Linux tooling, however none of them worked due to the c
 other linux distributions.
 The only approach that reliably worked has been by
 #### load the pinetime-mcuboot-app-dfu-1.14.0.zip on my iPhone
-#### using InfiniLink 1.1 ( in Beta ) connect to PineTime, and then flash it with the above zip
+The VirtualBox has enabled bidirectionality, however that is not sufficient to enable command line copy access. That can be achieved by installing additional extensions and granting access. finafinlly the following command copies the zip to my mac partition that as well is sync with iCloud
+'cp src/pinetime-mcuboot-app-dfu-1.14.0.zip /media/sf_luca'
 
+#### using InfiniLink 1.1 ( in Beta ) connect to PineTime, and then flash it with the above zip
+1. pair InfiniLink with the PineTime
+2. in InfiniLink click on Software Update
+3. then select local file
+4. choose the iCloud location where I transferred the pinetime-mcuboot-app-dfu-1.14.0.zip and click on upload and install
+5. 
 and voila ... the magic is done and the PineTimeConductorWatach is up and running.
 
 
